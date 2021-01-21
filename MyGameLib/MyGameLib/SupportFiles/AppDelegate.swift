@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  MyGameLib
 //
-//  Created by Roy Welborn on 1/13/21.
+//  Created by Roy Welborn on 1/16/21.
 //
 
 import UIKit
@@ -10,6 +10,8 @@ import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
