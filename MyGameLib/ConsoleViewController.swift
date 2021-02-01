@@ -90,10 +90,12 @@ class ConsoleViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     @IBAction func addNewList(_ sender: UIButton) {
         /* Make sure the header is correct */
-        addToTheListAlert()
+ //       addToTheListAlert()
     }
     
-    func addToTheListAlert() {
+    //TODO: Needs completed ****
+    
+/*    func addToTheListAlert() {
          /*  build custom alert to create a new list */
          let addItemAlert = UIAlertController(title: "Add a New Item", message: "Please enter the name of the Item", preferredStyle: .alert)
          /* add textfield for user input */
@@ -124,6 +126,7 @@ class ConsoleViewController: UIViewController, UITableViewDelegate, UITableViewD
          self.present(addItemAlert, animated: true, completion: nil)
 
      }
+ */
     
     //Tableview setup
     func numberOfSections(in tableView: UITableView) -> Int {
