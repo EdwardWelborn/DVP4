@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 import AVKit
 
+
 class InitialViewController: UIViewController {
     
     /* Variable Declarations */
@@ -28,6 +29,7 @@ class InitialViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         setupVideo()
+ 
     }
     
     func setupElements()

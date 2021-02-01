@@ -19,6 +19,7 @@ class HomeViewController: UIViewController
     let userName = [Users]()
     var db: Firestore!
     var data: String = ""
+    var firstTimer : Bool = true
     
     override func viewDidLoad()
     {
@@ -31,8 +32,6 @@ class HomeViewController: UIViewController
 //        freezerButton.titleLabel?.adjustsFontSizeToFitWidth = true
 //        recipeButton.titleLabel?.adjustsFontSizeToFitWidth = true
         // load data for all three arrays here
-        loadConsoleData()
-        loadGameData()
     }
     
     // MARK: Load Database Data
@@ -51,14 +50,17 @@ class HomeViewController: UIViewController
                      let purchased = data["datepurchased"] as? Date ?? Date()
                      
                      /* testing */
-                     print("ID: \(name.description) name: \(name)")
+ //                    print("ID: \(name.description) name: \(name)")
                      
                     let newSourse = Consoles(consoleName: name, serialNumber: serial, datePurchased: purchased)
                      consoleArray.append(newSourse)
-                    print(consoleArray.count.description)
+                    
                  }
              }
+            
          }
+        print("consoles array count: \(consoleArray.count.description)")
+        firstTimer = false
      }
     
     func loadGameData() {
@@ -76,13 +78,23 @@ class HomeViewController: UIViewController
                         let console = data["console"] as? String ?? "N/A"
 
                         /* testing */
-                        print("ID: \(name.description) name: \(name)")
+ //                       print("ID: \(name.description) name: \(name)")
                         let newSourse = Games(gameName: name, gameGenre: genre, finished: finished, console: console)
                         gamesArray.append(newSourse)
                     }
                 }
+                
             }
+        print("games array count: \(gamesArray.count.description)")
+        firstTimer = false
         }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if firstTimer
+        {
+            loadConsoleData()
+            loadGameData()
+        }
+    }
     // MARK: End Load Database Data
 }

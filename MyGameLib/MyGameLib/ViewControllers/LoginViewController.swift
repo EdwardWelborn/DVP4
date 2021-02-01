@@ -15,6 +15,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var backgroundImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +32,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         loginButton.tag = 2
         errorLabel.adjustsFontSizeToFitWidth = true
         errorLabel.numberOfLines = 3
+        errorLabel.text = ""
+        errorLabel.alpha = 0
         setUpElements()
         passwordTextField.addTarget(passwordTextField, action: #selector(loginTapped), for: .editingDidEndOnExit)
+      
     }
     
     override func viewWillDisappear(_ animated: Bool) {
