@@ -13,7 +13,16 @@ class ConsoleViewController: UIViewController, UITableViewDelegate, UITableViewD
  
     var db : Firestore!
     
+    @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var consoleTableView: UITableView!
+    var alertController : UIAlertController?
+    
+    
+    @IBAction func addButton(_ sender: Any)
+    {
+        // Pop up alert to add data
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -166,5 +175,6 @@ class ConsoleViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Pass the selected object to the new view controller.
     }
     */
-
+// TODO: alert window to add items to the consoles array and database
+    
 }
