@@ -315,10 +315,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="8Kn-4a-Xt1">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="752"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x9t-ju-YsK">
-                                <rect key="frame" x="15" y="103" width="384" height="744"/>
+                                <rect key="frame" x="15" y="103" width="384" height="729"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="consoleCell" rowHeight="126" id="4Oe-lD-Uoh" customClass="ConsoleTableViewCell" customModule="MyGameLib" customModuleProvider="target">
@@ -370,28 +370,67 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4j6-VS-PCH">
+                                <rect key="frame" x="152" y="839" width="88" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Console"/>
+                                <connections>
+                                    <action selector="addButton:" destination="Jcc-BY-r35" eventType="touchUpInside" id="GWB-le-Sk2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ofb-AP-eFU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="8Kn-4a-Xt1" firstAttribute="leading" secondItem="Ofb-AP-eFU" secondAttribute="leading" id="AXu-Lz-GJl"/>
                             <constraint firstItem="8Kn-4a-Xt1" firstAttribute="top" secondItem="Ofb-AP-eFU" secondAttribute="top" id="C4h-Lt-qCI"/>
-                            <constraint firstItem="Ofb-AP-eFU" firstAttribute="bottom" secondItem="8Kn-4a-Xt1" secondAttribute="bottom" id="CNK-r6-liM"/>
+                            <constraint firstItem="Ofb-AP-eFU" firstAttribute="bottom" secondItem="8Kn-4a-Xt1" secondAttribute="bottom" constant="22" id="CNK-r6-liM"/>
                             <constraint firstItem="x9t-ju-YsK" firstAttribute="top" secondItem="Ofb-AP-eFU" secondAttribute="top" constant="15" id="PHx-Cb-zgD"/>
                             <constraint firstItem="Ofb-AP-eFU" firstAttribute="trailing" secondItem="8Kn-4a-Xt1" secondAttribute="trailing" id="RpN-Ln-ukb"/>
                             <constraint firstItem="Ofb-AP-eFU" firstAttribute="trailing" secondItem="x9t-ju-YsK" secondAttribute="trailing" constant="15" id="fQ9-NJ-lS1"/>
-                            <constraint firstItem="Ofb-AP-eFU" firstAttribute="bottom" secondItem="x9t-ju-YsK" secondAttribute="bottom" constant="15" id="igT-C7-jbB"/>
+                            <constraint firstItem="Ofb-AP-eFU" firstAttribute="bottom" secondItem="x9t-ju-YsK" secondAttribute="bottom" constant="30" id="igT-C7-jbB"/>
                             <constraint firstItem="x9t-ju-YsK" firstAttribute="leading" secondItem="Ofb-AP-eFU" secondAttribute="leading" constant="15" id="jQc-JB-euu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uL6-HW-ngl"/>
                     <connections>
+                        <outlet property="addButton" destination="4j6-VS-PCH" id="nMr-VS-mdK"/>
                         <outlet property="consoleTableView" destination="x9t-ju-YsK" id="6cW-HY-5FH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xyh-XA-mrq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="763.768115942029" y="2203.7946428571427"/>
+        </scene>
+        <!--AddConsoleViewController-->
+        <scene sceneID="F8T-Z1-Hb8">
+            <objects>
+                <viewController title="AddConsoleViewController" id="yXJ-kP-LAW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t5b-i4-MeJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fBI-8s-uQR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v1j-NQ-hae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="755" y="2890"/>
+        </scene>
+        <!--AddGameViewController-->
+        <scene sceneID="3Ks-96-YLs">
+            <objects>
+                <viewController title="AddGameViewController" id="5fG-8H-0i0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zx2-yp-LVb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tY3-WM-Wk2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ia0-A5-8jQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1597" y="2890"/>
         </scene>
         <!--GamesViewController-->
         <scene sceneID="tvv-hA-aEE">

@@ -25,5 +25,7 @@ class GameFinderViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+ // TODO: be able to search through the database by console, and genre of game via drop down
+    
 }

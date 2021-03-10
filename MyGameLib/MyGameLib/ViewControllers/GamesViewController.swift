@@ -133,5 +133,5 @@ class GamesViewController: UIViewController, UITableViewDelegate, UITableViewDat
      }
      */
     
-    
+    // TODO: alert window to add items to the consoles array and database
 }
